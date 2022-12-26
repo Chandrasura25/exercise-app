@@ -13,7 +13,7 @@ const SearchExercises = ({bodyPart,setbodyPart,setexercises}) => {
     }
     fetchExercisesData()
   }, [])
-  console.log(bodyParts)
+  // console.log(bodyParts)
   const handleSearch = async () => {
     if (search) {
       const url = 'https://exercisedb.p.rapidapi.com/exercises';
@@ -33,7 +33,7 @@ const SearchExercises = ({bodyPart,setbodyPart,setexercises}) => {
         <Button className='search-btn' sx={{ width: { lg: '175px', xs: '80px' }, textTransform: 'none', color: '#fff', backgroundColor: '#ff2625', fontSize: { lg: '20px', xs: '14px', height: '56px', position: 'absolute', right: '0' } }} onClick={handleSearch}>Search</Button>
       </Box>
       <Box sx={{position:'relative',width:'100%',p:'20px'}}>
-        <HorizontalScrollbar data={bodyPart} bodyPart={bodyPart} setbodyPart={setbodyPart} />
+        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setbodyPart={setbodyPart} />
       </Box>
     </Stack>
   )
