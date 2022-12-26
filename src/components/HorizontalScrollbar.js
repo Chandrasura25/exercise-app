@@ -22,9 +22,11 @@ const RightArrow = () => {
 }
 const HorizontalScrollbar = ({ data, bodyPart, setbodyPart }) => {
     return (
-        <ScrollMenu leftArrow={LeftArrow} rightArrow={RightArrow}>
+        <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{ overflow: 'hidden' }}>
             {data.map((item) => (
-                <Box key={item.id || item} itemId={item.id || item} title={item.id || item} m='0 40px'><BodyPart item={item} bodyPart={bodyPart} setbodyPart={setbodyPart} /></Box>
+                <Box key={item.id || item} itemId={item.id || item} title={item.id || item} m='0 40px'>
+                    <BodyPart item={item} bodyPart={bodyPart} setbodyPart={setbodyPart} />
+                </Box>
             ))}
         </ScrollMenu>
     )
